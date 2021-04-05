@@ -43,7 +43,7 @@ class PhotoAdapter(var photoList: List<PhotoItem>): RecyclerView.Adapter<PhotoAd
 
         }
 
-        holder.itemView.setOnClickListener { view ->
+        holder.binding.photoCardView.setOnClickListener { view ->
 //            var velocityTracker = obtain()
 //
 //            velocityTracker.addMovement(motionEvent)
@@ -58,8 +58,8 @@ class PhotoAdapter(var photoList: List<PhotoItem>): RecyclerView.Adapter<PhotoAd
 //            }else {
 
                 if(!holder.isExpand){
-                    getSpringAnimation(view, DynamicAnimation.SCALE_X, .7F,1.3F).start()
-                    getSpringAnimation(view, DynamicAnimation.SCALE_Y, .7F,1.3F).start()
+                    getSpringAnimation(view, DynamicAnimation.SCALE_X, .6F,1.25F).start()
+                    getSpringAnimation(view, DynamicAnimation.SCALE_Y, .6F,1.2F).start()
                     holder.isExpand = true
                 }else{
                     getSpringAnimation(view, DynamicAnimation.SCALE_X, 1.3F,1F).start()
